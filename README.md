@@ -159,7 +159,6 @@ I recommend soldering the cables and isolating them with a shrink tube.
 We start at the roof switch. To get to the roof switch, open the cup holder, grasp the opening with the fingers and lift the silver bezel at the front of the circuit until it is released from the grid.
 
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper026.JPG)
 ![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper025.JPG)
 
 The white / purple cable must then be cut and the pink cable of our plug must be connected with the part of the white / purple cable which is still hanging on the plug. The black cable of the plug comes to the now still open end of the white / purple cable.
