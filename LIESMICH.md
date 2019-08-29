@@ -1,6 +1,6 @@
 # XF Roof Module
 
-English readme: [README.md](https://github.com/viper-666/xf_roof_module/blob/master/README.md)
+English readme: [README.md](https://github.com/viper-666/crossfire_roof_module/blob/master/README.md)
 
 Mit diesem Modul kann man das Verdeck des Crossfire öffnen/schließen ohne das man den Öffnen bzw. Schließen-Button die ganze Zeit gedrückt halten muss, ein kurzes antippen reicht.
 
@@ -107,29 +107,31 @@ Man kann aber jede andere Buchse und Stecker nehmen solange diese mindestens 8 K
 
 Zum Aufbau wird die Platine im Maß von 90mm x 53mm benötigt.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper000.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper000.JPG)
 
 Zuerst habe ich die kleineren Bauteile und zum Schluss den Arduino und die Buchse eingelötet. 
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper001.JPG)
-Die Platine nach dem [Schaltplan](https://github.com/viper-666/xf_roof_module/blob/master/Dachmodul.pdf) aufbauen.
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper001.JPG)
+Die Platine nach dem [Schaltplan](https://github.com/viper-666/crossfire_roof_module/blob/master/Dachmodul.pdf) aufbauen.
 
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper006.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper008.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper006.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper008.JPG)
 
-Der Stecker mit den Kabeln wird nach folgendem [Schema](https://github.com/viper-666/xf_roof_module/blob/master/Verkabelung.pdf) erstellt und in den Kabelbaum des Crossfire eingebunden.
+Der Stecker mit den Kabeln wird nach folgendem [Schema](https://github.com/viper-666/crossfire_roof_module/blob/master/Verkabelung.pdf) erstellt und in den Kabelbaum des Crossfire eingebunden.
 Die in Blau bezeichneten PINs gehören auf den entsprechenden PINs des Steckers. 
 Die Pins für den Stecker sollten mit einer Crimpzange auf die abisolierten Kabelenden aufgekrimpt werden. Falls du keine Crimpzange hast, diese gibt es günstig für 10-20€ oder du kannst die Kabelenden auch mit den Pins verlöten.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper010.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper011.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper012.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper013.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper010.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper011.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper012.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper013.JPG)
 
 So sieht das fertige Modul mit dem gedruckten Gehäuse aus:
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper014.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper014.JPG)
+
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper014-2.JPG)
 
 Ich empfehle den Bau eines Deaktivierungssteckers, dieser wird bei Problemen oder Verkauf des Autos anstatt des Dachmoduls eingesteckt. Damit werden die durchtrennten Leitungen wieder verbunden und der "Originalzustand" wieder hergestellt.
 Dafür einfach bei einer Buchse folgende Pins verbinden:
@@ -140,47 +142,47 @@ Dafür einfach bei einer Buchse folgende Pins verbinden:
 |PIN 7|PIN 12|
 |PIN 9|PIN 13|
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper002.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper003.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper004.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper005.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper002.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper003.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper004.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper005.JPG)
 
 
 ## Installation der Software
 
-Einfach das [Sketch](https://github.com/viper-666/xf_roof_module/blob/master/Crossfire_Dachmodul-4.ino) mit der [ARDUINO IDE](https://www.arduino.cc/en/Main/Software) auf den Arduino laden.
+Einfach das [Sketch](https://github.com/viper-666/crossfire_roof_module/blob/master/Crossfire_Dachmodul-4.ino) mit der [ARDUINO IDE](https://www.arduino.cc/en/Main/Software) auf den Arduino laden.
 
 
 ## Einbau in den Crossfire
 
-Der im vorherigen Punkt erstellte Stecker mit den Kabeln wird nun nach folgenden [Schema](https://github.com/viper-666/xf_roof_module/blob/master/Verkabelung.pdf) im Crossfire verkabelt.
+Der im vorherigen Punkt erstellte Stecker mit den Kabeln wird nun nach folgenden [Schema](https://github.com/viper-666/crossfire_roof_module/blob/master/Verkabelung.pdf) im Crossfire verkabelt.
 
 Ich empfehle die Kabel zu verlöten und mit Schrumpfschlauch zu isolieren. 
 
 Wir fangen am Dachschalter an. Um an den Dachschalter zu kommen den Cup-Holder aufmachen, mit den Fingern in die Öffnung greifen und die silbernene Blende vorne an der Schaltung anheben bis sie sich an der Schaltung aus der Rasterung löst.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper026.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper026.JPG)
 
 
 Anschließend muss das Weiß/Violette Kabel durchtrennt werden und das Lila Kabel unseres Steckers mit dem Teil des Weiß/Violetten Kabels verbunden werden welches noch am Stecker hängt. Das Schwarze Kabel des Steckers kommt an das nun noch offene Ende des Weiß/Violetten Kabels.
 Das Weiße Kabel unseres Steckers kommt nun noch an das Braun/Gelbe Kabel.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper18.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper18.JPG)
 
 Jetzt müssen wir im Beifahrerfußraum den Teppich hoch heben und in Richtung Sitz klappen und die weiße Styrophor Platte weg nehmen.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper020.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper020.JPG)
 
 Die silberne Blechplatte ist mit 3 schwarzen Kunststoffmuttern gesichert, welche entfernt werden müssen.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper021.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper021.JPG)
 
 Nun können wir diese in Richtung Sitz weg klappen. Der Kabelbaum mit den benötigten Kabeln ist rechts oben.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper16.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper17.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper19.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper15.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper16.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper17.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper19.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper15.JPG)
 
 In diesem Kabelbaum müssen wir nun folgende Kabel suchen:
 - Rosa/Rot/Schwarz (+12V) dieses verbinden wir mit dem roten Kabel des Steckers
@@ -191,9 +193,9 @@ In diesem Kabelbaum müssen wir nun folgende Kabel suchen:
 Wenn noch genügend Platz im Kasten für das RCM-Modul und dem Steuergerät ist kann man die Kabel auch direkt am Stecker des Steuergerätes abgreifen und muss nur die Kabel für den Dachschalter durch die Durchführung des Kabelbaumes nach innen führen.
 Vorteil ist, die bessere Zugänglichkeit und das man die Kabel eindeutig am Stecker findet, da dort die PIN-Nummern lesbar sind.
 
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper022.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper023.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/xf_roof_module/blob/master/Viper024.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper022.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper023.JPG)
+![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper024.JPG)
 
 
 ## Erstellt mit:
@@ -209,5 +211,5 @@ Vorteil ist, die bessere Zugänglichkeit und das man die Kabel eindeutig am Stec
 
 ## License
 
-Dieses Projekt steht unter GNU General Public License v3.0 License - schau dir die [LICENSE](https://github.com/viper-666/xf_roof_module/blob/master/LICENSE) an fuer details.
+Dieses Projekt steht unter GNU General Public License v3.0 License - schau dir die [LICENSE](https://github.com/viper-666/crossfire_roof_module/blob/master/LICENSE) an fuer details.
 
