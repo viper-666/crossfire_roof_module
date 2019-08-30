@@ -4,7 +4,7 @@
  * -Halten des Tasters für Dach-Auf und Dach-Zu entfällt, einfach Taster 1x kurz drücken.
  * -Öffnen und Schließen des Daches bis zu x km/h
  * Skript von Andre Holtkamp AKA Viper 
- * V1.1 vom 05/2018 
+ * V1.2 vom 08/2019
  * https://crossfire-forum-deutschland.de/viewtopic.php?f=8&t=694#p5604
  * 
  * Anschluss Dachsteuerung PINS Arduino
@@ -47,11 +47,11 @@ volatile unsigned long count;
 // Diese Variablen können angepasst werden
  int KARENZZEIT = 1000; // Karenzzeit zwischen zwei Tastendrücken in ms
  int DOPPELKLICKZEIT = 300; // Zeit in zwischen Doppelklick zum Fensterschließen ms
- long MAXLAUFZEIT = 30000; // Zeit welche das Dachöffnen/schließen Signal max. geschaltet wird in ms
+ long MAXLAUFZEIT = 35000; // Zeit welche das Dachöffnen/schließen Signal max. geschaltet wird in ms
  const unsigned long Tmess = 200; // Messfrequenz Frequenzmessung in ms
  int TimeHOLD = 10000; // Zeitvariable wie lange zwischen 7km/h bis GESCHWINDIGKEIT freigeschaltet wird in ms
  int TimeHOLD_AN = 2000; // Zeitvariable wann Ausgang Dach AUF/ZU geschaltet wird in ms
- int GESCHWINDIGKEIT = 55; //Geschwindigkeit bis zu der das Dach geöffnet werden kann
+ int GESCHWINDIGKEIT = 50; //Geschwindigkeit bis zu der das Dach geöffnet werden kann
 
 void setup() {
 
@@ -212,6 +212,21 @@ if ((millis() >= (loopTime + KARENZZEIT)) && (AKTIVIERT == 1) && (ANALOG_EINGANG
 
 
 // Fenstersteuerung ***************************************************************************************************************************
+
+
+// Fenster automatisch schließen abbrechen Überprüfe ob Taster Dach-AUF gedrückt
+if (((ANALOG_EINGANG0 > 10) && (ANALOG_EINGANG0 < 300)) && (ZFZU > 0)) {
+    ZFZU = 0;
+    FENSTERZUA = 0;
+      } 
+      
+// Fenster automatisch schließen abbrechen Überprüfe ob Taster Dach-Zu gedrückt
+if ((ANALOG_EINGANG0 < 10) && (ZFZU > 0)) {
+    ZFZU = 0;
+    FENSTERZUA = 0;
+      } 
+
+
 // Fenster automatisch schließen nach Dach öffnen
     if ((millis() >= (loopTimeFZU + 4 * DOPPELKLICKZEIT)) && (ZFZU==1) && (FENSTERZUA == 1)) {
     digitalWrite(OUT_PIN_AUF, HIGH);
@@ -237,23 +252,29 @@ if ((millis() >= (loopTime + KARENZZEIT)) && (AKTIVIERT == 1) && (ANALOG_EINGANG
 
 
 // Fenster automatisch schließen nach Dach schließen
-    if ((millis() >= (loopTimeFZU + 4 * DOPPELKLICKZEIT)) && (ZFZU==1) && (FENSTERZUA == 2)) {
+    if ((digitalRead(LED_SCHALTER) == LOW) && (ZFZU==1) && (FENSTERZUA == 2)) {  // warten bis LED im Schalter aus ist
+    loopTimeFZU = millis();
+    ZFZU++;
+    MELDUNG = "Fenster schließen";
+    }
+    
+    if ((millis() >= (loopTimeFZU + 4 * DOPPELKLICKZEIT)) && (ZFZU==2) && (FENSTERZUA == 2)) {
     digitalWrite(OUT_PIN_ZU, HIGH);
     ZFZU++;
     MELDUNG = "Fenster schließen";
     }
   
-    if (millis() >= (loopTimeFZU + (5 * DOPPELKLICKZEIT)) && (ZFZU==2) && (FENSTERZUA == 2)) {
+    if (millis() >= (loopTimeFZU + (5 * DOPPELKLICKZEIT)) && (ZFZU==3) && (FENSTERZUA == 2)) {
     digitalWrite(OUT_PIN_ZU, LOW);
     ZFZU++;
     }
     
-    if (millis() >= (loopTimeFZU + (6 * DOPPELKLICKZEIT)) && (ZFZU==3) && (FENSTERZUA == 2)) {
+    if (millis() >= (loopTimeFZU + (6 * DOPPELKLICKZEIT)) && (ZFZU==4) && (FENSTERZUA == 2)) {
     digitalWrite(OUT_PIN_ZU, HIGH);
     ZFZU++;
     }
     
-    if (millis() >= (loopTimeFZU + (22 * DOPPELKLICKZEIT)) && (ZFZU==4) && (FENSTERZUA == 2)) {
+    if (millis() >= (loopTimeFZU + (22 * DOPPELKLICKZEIT)) && (ZFZU==5) && (FENSTERZUA == 2)) {
     digitalWrite(OUT_PIN_ZU, LOW);
     ZFZU = 0;
     FENSTERZUA = 0;
@@ -270,7 +291,7 @@ if ((digitalRead(LED_SCHALTER) == HIGH) && (AKTIVIERT == 1)) {
  MELDUNG = "LED=1";
 }
 
-if ((digitalRead(LED_SCHALTER) == LOW) && (AKTIVIERT == 1) && (LED == 1)) {
+if ((digitalRead(LED_SCHALTER) == LOW) && (AKTIVIERT == 1) && (LED == 1) && (ZFZU == 0)) {
  STOP (1);
  LED = 0;
  MELDUNG = "Stop LED";
