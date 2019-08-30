@@ -2,13 +2,13 @@
 
 Deutsche Anleitung: [LIESMICH.md](https://github.com/viper-666/xf_roof_module/blob/master/LIESMICH.md)
 
-This module allows you to open / close the Crossfire's soft top without having to press and hold the Open / Close button all the time.
+This module allows you to open / close the Crossfire's convertible top without having to press and hold the Open / Close button all the time.
 
 Another feature is that you can set up the speed at which you can do this in the Arduino Sketch.
-The default is 31 mph (50 kph) (variable "int GESCHWINDIGKEIT = 50" attention it is in kph not in mph) and should not be increased. If the speed at which you open the soft top is too high, this will damage your convertible top or the mechanics.
+The default is 31 mph (50 kph) (variable "int GESCHWINDIGKEIT = 50" attention it is in kph not in mph) and should not be increased. If the speed at which you open the convertible top is too high, this will damage your convertible top or the mechanics.
 
 In addition, the windows are automatically raised after the convertible top is opened.
-There is also an emergency stop function simply push the button, no matter which direction, again and the roof stops.
+There is also an emergency stop function simply push the button, no matter which direction, again and the convertible top stops.
 
 I have tested the module for several months without problems but it could damage your car. Therefore, a replica is done at your own risk!
 
@@ -16,15 +16,15 @@ I have tested the module for several months without problems but it could damage
 ## Handling
 
 If you want to open or close the roof while the car stands simply press the switch short in the appropriate direction. It can take up to 2 seconds before the roof moves. If an error occurs it will piping.
-During the journey, you can open or close the roof up to the set speed. 
+During the journey, you can open or close the convertible top up to the set speed. 
 
 Please note the following:
 
-If you want to open the roof while driving, it is very important first to press the switch open and then to unlock the roof within 2 seconds.
-If you unlock the roof first, the original CrossFire convertible module is interrupted and you have to close the roof again and wait a few seconds until you can open it.
+If you want to open the convertible top while driving, it is very important first to press the switch open and then to unlock the convertible top within 2 seconds.
+If you unlock the convertible top first, the original CrossFire convertible module is interrupted and you have to close the convertible top again and wait a few seconds until you can open it.
 
-When closing while driving up to the set speed, there is nothing else to do, just press the switch on close and after about 2 seconds the roof will close.
-If you get over the set speed while opening or closing, the roof stops moving and you have to speed down under the set speed and the roof will complete the action.
+When closing while driving up to the set speed, there is nothing else to do, just press the switch on close and after about 2 seconds the convertible top will close.
+If you get over the set speed while opening or closing, the convertible top stops moving and you have to speed down under the set speed and the convertible top will complete the action.
 
 ## Lets start
 
