@@ -150,7 +150,6 @@ We start at the roof switch. To get to the roof switch, open the cup holder, gra
 
 
 ![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper026.JPG)
-![Build of the prototyp-PCB](https://github.com/viper-666/crossfire_roof_module/blob/master/Viper025.JPG)
 
 The white / purple cable must then be cut and the purple cable of our plug must be connected with the part of the white / purple cable which is still hanging on the plug. The black cable of the plug comes to the now still open end of the white / purple cable.
 The white cable of our plug comes to the brown / yellow cable.
