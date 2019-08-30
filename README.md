@@ -1,6 +1,6 @@
 # XF Roof Module
 
-Deutsche Anleitung: [LIESMICH.md](https://github.com/viper-666/xf_roof_module/blob/master/LIESMICH.md)
+Deutsche Anleitung: [LIESMICH.md](https://github.com/viper-666/crossfire_roof_module/blob/master/LIESMICH.md)
 
 This module allows you to open / close the Crossfire's convertible top without having to press and hold the Open / Close button all the time.
 
