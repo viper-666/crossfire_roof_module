@@ -4,7 +4,7 @@
  * -Halten des Tasters für Dach-Auf und Dach-Zu entfällt, einfach Taster 1x kurz drücken.
  * -Öffnen und Schließen des Daches bis zu x km/h
  * Skript von Andre Holtkamp AKA Viper 
- * V1.2 vom 08/2019
+ * V1.3 vom 10/2019
  * https://crossfire-forum-deutschland.de/viewtopic.php?f=8&t=694#p5604
  * 
  * Anschluss Dachsteuerung PINS Arduino
@@ -214,7 +214,7 @@ if ((millis() >= (loopTime + KARENZZEIT)) && (AKTIVIERT == 1) && (ANALOG_EINGANG
 // Fenstersteuerung ***************************************************************************************************************************
 
 
-// Fenster automatisch schließen abbrechen Überprüfe ob Taster Dach-AUF gedrückt
+/* Fenster automatisch schließen abbrechen Überprüfe ob Taster Dach-AUF gedrückt
 if (((ANALOG_EINGANG0 > 10) && (ANALOG_EINGANG0 < 300)) && (ZFZU > 0)) {
     ZFZU = 0;
     FENSTERZUA = 0;
@@ -225,7 +225,7 @@ if ((ANALOG_EINGANG0 < 10) && (ZFZU > 0)) {
     ZFZU = 0;
     FENSTERZUA = 0;
       } 
-
+*/
 
 // Fenster automatisch schließen nach Dach öffnen
     if ((millis() >= (loopTimeFZU + 4 * DOPPELKLICKZEIT)) && (ZFZU==1) && (FENSTERZUA == 1)) {
